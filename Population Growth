@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int counter;
+    int n;
+    int end;
+    
+    do
+    {
+     n= get_int("Enter the number you start with");
+    }
+    while(n<9);
+    
+    do
+    {
+    end = get_int("Enter the  last number");
+    }
+    while(end<n);
+    
+    for( counter=0;n<end;counter++)
+    {
+        n=(n+((n/3 )-(n/4)));
+    }
+    //counter--;
+    printf("it's will take %i\n", counter);
+}
